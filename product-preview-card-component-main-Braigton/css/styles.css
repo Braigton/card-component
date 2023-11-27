@@ -1,0 +1,156 @@
+:root {
+    --azulOscuro: hsl(212, 21%, 14%);
+    --grisOscuro: hsl(228, 12%, 48%);
+    --cyanOscuro: hsl(158, 36%, 37%);
+    --crema: hsl(30, 38%, 92%);
+    --fuente: 'Montserrat', sans-serif;
+    --fuentedos: 'Fraunces', serif;
+}
+
+/** Globales **/
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--fuentedos);
+    font-size: 16px;
+    background-color: var(--crema);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 1px);
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.attribution {
+    font-size: 12px;
+    text-align: center;
+    font-family: var(--fuente);
+    margin-top: 1rem;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+.contenedor {
+    display: flex;
+    max-width: 65rem;
+    background-color: white;   
+    border-radius: 1rem;
+}
+@media (max-width: 375px) {
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 85%;
+    }
+}
+
+/** Imagen **/
+.imagen-cont {
+   width: 50%;
+}
+.imagen-cont img {
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+@media (max-width: 375px) {
+    .imagen-cont {
+        width: 100%;
+        height: 40%;
+        background-size: cover;
+    }
+
+    .imagen-cont img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-top-right-radius: 1rem;
+        border-bottom-left-radius: 0;
+    }
+}
+
+/** Textos **/
+.texto {
+    width: 50%;
+    padding: 3rem;
+}
+.texto__titulo {
+    margin-top: 3rem;
+    margin-right: 4rem;
+}
+.texto__minititulo {
+    color: var(--grisOscuro);
+    font-family: var(--fuente);
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+.texto__descripcion {
+    color: var(--grisOscuro);
+    font-family: var(--fuente);
+    margin-top: 3rem;
+    line-height: 22px;
+    font-size: 16px;
+}
+@media (max-width: 375px) {
+    .texto__titulo, .texto__descripcion  {
+        margin-top: 1rem;
+        margin-right: 0rem;
+    }
+
+    .texto {
+        width: 100%;
+        height: 20%;
+    }
+}
+
+/** Precios **/
+.precio {
+    display: flex;
+    align-items: center;
+    font-family: var(--fuentedos);
+    margin-top: 3rem;
+}
+.precio__valido {
+    color: var(--cyanOscuro);
+    padding-right: 1.5rem;
+    font-size: 3.2rem;
+}
+.precio__novalido {
+    font-family: var(--fuente);
+    font-size: 1.6rem;
+    text-decoration: line-through;
+    color: var(--grisOscuro)
+}
+
+.carrito {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--cyanOscuro);
+    color: white;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    border-radius: 1rem;
+    width: 100%;
+    border: none;
+    margin-top: 3rem;
+    cursor: pointer;
+}
+.carrito:hover {
+    background-color: hsl(158, 36%, 20%);
+}
+.carrito__texto {
+    font-family: var(--fuente);
+}
+
